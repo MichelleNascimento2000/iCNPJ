@@ -1,0 +1,7 @@
+{
+  "name": "iCNPJ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
