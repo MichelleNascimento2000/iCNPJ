@@ -6,14 +6,17 @@ import { RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 import { RedirectButtonComponent } from './redirect-button/redirect-button.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 @NgModule({
     declarations: [
-        RedirectButtonComponent
+        RedirectButtonComponent,
+        SearchBarComponent
     ],
     exports: [
-        RedirectButtonComponent
+        RedirectButtonComponent,
+        SearchBarComponent
     ],
     imports: [
         CommonModule,

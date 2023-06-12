@@ -1,0 +1,11 @@
+<!-- Barra de input e pesquisa -->
+<div [class]="'container container-' + page">
+    <ion-item [class]="'cnpj-input cnpj-input-' + page">
+        <ion-icon name="search-outline" slot="start" (click)="search()" [ngStyle]="{'color': iconColorsMap.get(page)}"></ion-icon>
+
+        <ion-input *ngIf="page == 'Pesquisar'" type="text" name="text" [ngStyle]="{'color': iconColorsMap.get(page)}" 
+            [(ngModel)]="companyService.cnpjToGet" placeholder="Digite o CNPJ" (keyup.enter)="search()"></ion-input>
+
+        <ion-icon name="close-outline" slot="end" (click)="clearInput()" [ngStyle]="{'color': iconColorsMap.get(page)}"></ion-icon>
+    </ion-item>
+</div>

@@ -1,0 +1,30 @@
+//  Container do Input - BASE
+.container {
+    padding: 25px 7px;
+}
+
+//  Container do Input (Search)
+.container-Pesquisar {
+    background: var(--green-1);
+}
+
+//  Elemento do Input - BASE
+.cnpj-input {
+    box-shadow: 0px 3px 6px #0000004d;
+
+    border-radius: 30px;
+    
+    transition: 0.3s ease-in-out;
+
+    width: 96%;
+    left: 2%;
+    top: 2%;
+
+    font-family: var(--std-font);
+    letter-spacing: 0px;
+}
+
+//  Elemento do Input (Search)
+.cnpj-input-Pesquisar {
+    --background: var(--green-3);
+}
