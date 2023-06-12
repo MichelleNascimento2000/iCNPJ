@@ -1,0 +1,14 @@
+<ion-tabs>
+	<ion-tab-bar class="footer-tab-bar-style" slot="bottom">
+
+        <!-- Iterar sobre as seções da página de detalhes da gameplay para exibir as tabs de filtragem -->
+        <ion-tab-button *ngFor="let section of companyService.appFeaturesEnum | keyvalue: companyService.originalOrder"
+            class="footer-tab-button" (click)="companyService.loadChosenPageFromTabs(section.value)"
+            (click)="companyService.updateTabsMap(section.value)"
+        >
+            <ion-img style="height: 27px; position: relative; bottom: 5%;" 
+                    [src]="'./assets/images/search-tabs-' + companyService.getSelectedTabStatus(section.value) + '-' + section.value + '.png'"></ion-img>
+            <ion-label class="tabs-text">{{section.value}}</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

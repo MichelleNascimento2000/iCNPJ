@@ -1,0 +1,23 @@
+//  Estilo da barra de tabs
+.footer-tab-bar-style{
+    background-color: var(--white);
+}
+
+//  Estilo do botão das tabs do rodapé
+.footer-tab-button{
+    font: normal normal normal 14px/16px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+    background-color: var(--white);
+}
+
+//  Estilo do texto das tabs do rodapé
+.footer-tab-text{
+    font: normal normal normal 16px/18px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+}

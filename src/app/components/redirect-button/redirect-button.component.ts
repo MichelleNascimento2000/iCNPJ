@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Buttons } from 'src/app/models/UtilsModels';
+import { NavController } from '@ionic/angular';
+import { Buttons, ButtonsRedirect } from 'src/app/models/UtilsModels';
+import { CompanyService } from 'src/app/services/company.service';
 
 @Component({
     selector: 'app-redirect-button',
@@ -10,7 +12,16 @@ export class RedirectButtonComponent implements OnInit {
 
     @Input() button_title: Buttons;
 
-    constructor() { }
+    constructor(
+        private navController: NavController,
+        public companyService: CompanyService
+    ) { }
 
     ngOnInit() { }
+
+    onClick(){
+		this.navController.navigateForward(ButtonsRedirect[this.button_title]);
+        this.companyService.currentPage = this.button_title;
+        this.companyService.updateTabsMap(this.button_title);
+    }
 }
