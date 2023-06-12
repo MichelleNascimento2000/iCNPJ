@@ -1,0 +1,20 @@
+//  Estilo dos botões
+ion-button {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    --border-radius: 45px;
+    --padding-start: 80px;
+    --padding-end: 80px;
+    height: 60px;
+
+
+    color: var(--green-1);
+    --background: var(--green-2);
+    font-size: 24px;
+    font-weight: 700;
+    --box-shadow: 0px 3px 6px #0000004D;
+    letter-spacing: 0px;
+}

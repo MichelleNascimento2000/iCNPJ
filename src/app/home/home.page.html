@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="background" [fullscreen]="true">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- Logotipo -->
+    <ion-img class="logo" src="../../assets/images/logo-iCNPJ.png"></ion-img>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <!-- Título -->
+    <ion-label class="title">CONSULTE QUALQUER<br>CNPJ RAPIDAMENTE</ion-label>
+
+    <!-- Redireciona para a página de pesquisa -->
+    <app-redirect-button [button_title]="buttonPesquisar"></app-redirect-button>
+    
 </ion-content>
