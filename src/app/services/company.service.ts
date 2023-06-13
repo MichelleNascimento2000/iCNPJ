@@ -44,6 +44,40 @@ export class CompanyService {
     //  Controle de Loading
     public isLoading: boolean = false;
 
+    //  Map dos rótulos retornados pela API
+    public labels: Map<string, string> = new Map([
+        ['status', 'Status'],
+        ['ultima_atualizacao', 'Última Atualização'],
+        ['cnpj', 'CNPJ'],
+        ['tipo', 'Tipo'],
+        ['porte', 'Porte'],
+        ['razao', 'Razão Social'],
+        ['fantasia', 'Nome Fantasia'],
+        ['abertura', 'Data de Abertura'],
+        ['natureza_juridica', 'Natureza Jurídica'],
+        ['logradouro', 'Logradouro'],
+        ['numero', 'Número'],
+        ['complemento', 'Complemento'],
+        ['cep', 'CEP'],
+        ['bairro', 'Bairro'],
+        ['municipio', 'Município'],
+        ['uf', 'Estado'],
+        ['email', 'Email'],
+        ['telefone', 'Telefone'],
+        ['efr', 'Ente Federativo Responsável'],
+        ['situacao', 'Situação'],
+        ['data_situacao', 'Data da Situação'],
+        ['motivo_situacao', 'Motivo da Situação'],
+        ['situacao_especial', 'Situação Especial'],
+        ['data_situacao_especial', 'Data da Situação Especial'],
+        ['capital_social', 'Capital Social'],
+        ['nome', 'Nome'],
+        ['qual', 'Qualificação'],
+        ['pais_origem', 'País de Origem'],
+        ['nome_rep_legal', 'Nome do Representante Legal'],
+        ['qual_rep_legal', 'Qualificação do Representante Legal']
+    ]);
+
     //  Parâmetros para formatação de data
     public dateTimeFormat: Intl.DateTimeFormatOptions = {
 		hour  : `2-digit`,
@@ -68,7 +102,6 @@ export class CompanyService {
     //  Fechar Loading
     public loadingOff(): void {
         this.isLoading = false;
-        
     }
     
     //  Buscar informações da empresa usando o CNPJ inserido

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyService } from '../../services/company.service';
 
 @Component({
     selector: 'app-search',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-    constructor() { }
+    constructor(
+        public companyService: CompanyService
+    ) { }
 
     ngOnInit() {
     }

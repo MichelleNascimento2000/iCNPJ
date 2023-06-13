@@ -1,0 +1,69 @@
+<div *ngIf="page == 'Pesquisar'">
+
+    <!-- Informações principais da empresa -->
+    <ion-card *ngIf="getCompany() != undefined" class="animate__animated animate__headShake company-exhibition-card">
+        <ion-card-header>
+            <ion-card-subtitle class="company-subtitle">{{getCompany().cnpj}}</ion-card-subtitle>
+            <ion-grid fixed class="company-favorite-grid">
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-card-title class="company-title-main">{{getCompany().razao}}</ion-card-title>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label *ngFor="let key of getObjectKeys(getCompany())">
+                <span *ngIf="shouldInfoAppear(key, getCompany()[key])" class="company-info-key">{{ companyService.labels.get(key)?.toUpperCase() }}: </span>
+                <span *ngIf="shouldInfoAppear(key, getCompany()[key])" class="company-info-value">{{ getCompany()[key] }}</span>
+                <br *ngIf="shouldInfoAppear(key, getCompany()[key])">
+                <br *ngIf="shouldInfoAppear(key, getCompany()[key])">
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Atividade Principal -->
+    <ion-card *ngIf="getCompany() != undefined && getCompany().atividade_principal.length" class="animate__animated animate__headShake company-exhibition-card">
+        <ion-card-header>
+            <ion-card-title class="company-title-secondary">Atividade Principal</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label *ngFor="let activity of getCompany().atividade_principal">
+                <span class="company-info-key">{{ activity.code }}: </span>
+                <span class="company-info-value">{{ activity.text }}</span>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Atividades Secundárias -->
+    <ion-card *ngIf="getCompany() != undefined && getCompany().atividades_secundarias.length" class="animate__animated animate__headShake company-exhibition-card">
+        <ion-card-header>
+            <ion-card-title class="company-title-secondary">Atividades Secundárias</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label *ngFor="let activity of getCompany().atividades_secundarias">
+                <span class="company-info-key">{{ activity.code }}: </span>
+                <span class="company-info-value">{{ activity.text }}</span>
+                <br><br>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Quadro Societário -->
+    <ion-card *ngIf="getCompany() != undefined && getCompany().qsa.length" class="animate__animated animate__headShake company-exhibition-card">
+        <ion-card-header>
+            <ion-card-title class="company-title-secondary">Quadro Societário</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label *ngFor="let socio of getCompany().qsa">
+                <ion-label *ngFor="let key of getObjectKeys(socio)">
+                    <span *ngIf="shouldInfoAppear(key, socio[key])" class="company-info-key">{{ companyService.labels.get(key) }}: </span>
+                    <span *ngIf="shouldInfoAppear(key, socio[key])" class="company-info-value">{{ socio[key] }}</span>
+                    <br *ngIf="shouldInfoAppear(key, socio[key])">
+                    <br *ngIf="shouldInfoAppear(key, socio[key])">
+                </ion-label>
+                <br>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+</div>

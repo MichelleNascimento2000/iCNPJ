@@ -1,0 +1,64 @@
+//  Card de exibição das empresas
+.company-exhibition-card {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 70%;
+    left: 12%;
+
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px #0000004D;
+}
+
+//  Subtítulo do card (CNPJ)
+.company-subtitle {
+    font: normal normal normal 17px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+
+    margin-bottom: 20px;
+}
+
+//  Grid com título e icon de favorito
+.company-favorite-grid {
+    position: relative;
+    padding: 0px;
+    left: -2%;
+}
+//  Título do card (Nome)
+.company-title-main {
+    font: normal normal bold 27px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+}
+
+//  Tipo do dado
+.company-info-key {
+    font: normal normal bold 17px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+}
+
+//  Valor do dado
+.company-info-value {
+    font: normal normal normal 14px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+}
+
+//  Título secundário (Atividades)
+.company-title-secondary {
+    font: normal normal bold 24px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--green-1);
+}

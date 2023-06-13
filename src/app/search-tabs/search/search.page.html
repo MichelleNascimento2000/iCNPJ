@@ -3,4 +3,11 @@
     <!-- Barra de pesquisa -->
     <app-search-bar [page]="'Pesquisar'"></app-search-bar>
 
+    <!-- Espaçamento -->
+    <div style="margin-bottom: 30px;"></div>
+
+    <!-- Empresa -->
+    <app-company-item *ngIf="companyService.isCNPJValid" [page]="'Pesquisar'" [company]="companyService.searchedCompany"></app-company-item>
+
+
 </ion-content>
