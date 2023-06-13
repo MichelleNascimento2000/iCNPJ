@@ -6,6 +6,10 @@
     <!-- Espaçamento -->
     <div style="margin-bottom: 30px;"></div>
 
+    
+    <!-- Loading -->
+    <app-loader *ngIf="companyService.isLoading"></app-loader>
+
     <!-- Empresa -->
     <app-company-item *ngIf="companyService.isCNPJValid" [page]="'Pesquisar'" [company]="companyService.searchedCompany"></app-company-item>
 

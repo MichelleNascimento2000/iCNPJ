@@ -107,6 +107,7 @@ export class CompanyService {
     //  Buscar informações da empresa usando o CNPJ inserido
     public async searchCompany(): Promise<void> {
         this.loadingOn();
+        this.isCNPJValid = true;
 
         if(!Boolean(this.cnpjToGet)){
             this.changeValidationFields(

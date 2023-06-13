@@ -9,6 +9,7 @@ import { RedirectButtonComponent } from './redirect-button/redirect-button.compo
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { CompanyItemComponent } from './company-item/company-item.component';
 import { ErrorItemComponent } from './error-item/error-item.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -16,13 +17,15 @@ import { ErrorItemComponent } from './error-item/error-item.component';
         RedirectButtonComponent,
         SearchBarComponent,
         CompanyItemComponent,
-        ErrorItemComponent
+        ErrorItemComponent,
+        LoaderComponent
     ],
     exports: [
         RedirectButtonComponent,
         SearchBarComponent,
         CompanyItemComponent,
-        ErrorItemComponent
+        ErrorItemComponent,
+        LoaderComponent
     ],
     imports: [
         CommonModule,
