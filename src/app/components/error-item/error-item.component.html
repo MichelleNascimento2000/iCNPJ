@@ -1,0 +1,74 @@
+<div style="position: relative; top: 25%;" *ngIf="type == 'Inválido'">
+
+    <!-- Exibição do erro -->
+    <ion-card class="animate__animated animate__headShake error-content-card">
+        <ion-card-header>
+            <ion-grid fixed class="error-header-grid">
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-card-title class="error-title-main">ERRO</ion-card-title>
+                    </ion-col>
+                    <ion-col size="4" style="left: 20%">
+                        <ion-img style="width: 35%" src="../../../assets/images/error.png"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label class="error-message-invalid">{{this.message}}</ion-label>
+
+            <ion-grid fixed class="error-header-grid">
+                <ion-row>
+                    <ion-col size="8">
+                    </ion-col>
+                    <ion-col size="4" style="left: 10%">
+                        <ion-label class="error-return-message" (click)="resetValidCNPJ()">VOLTAR</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</div>
+
+<div style="position: relative; top: 25%;" *ngIf="type == 'Inexistente'">
+
+    <!-- Exibição do erro -->
+    <div class="not-found-icon">
+        <ion-img style="width: 60%; left: 20%; position: relative" src="../../../assets/images/not-found.png"></ion-img>
+    </div>
+    <div style="margin: 5% 20% 0% 20%; text-align: center;">
+        <ion-label class="error-message-not-found">{{this.message}}</ion-label>
+    </div>
+</div>
+
+<div style="position: relative; top: 25%;" *ngIf="type == 'Outros'">
+    
+    <!-- Exibição do erro -->
+    <ion-card class="animate__animated animate__headShake error-content-card">
+        <ion-card-header>
+            <ion-grid fixed class="error-header-grid">
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-card-title class="error-title-main">ERRO</ion-card-title>
+                    </ion-col>
+                    <ion-col size="4" style="left: 20%">
+                        <ion-img style="width: 35%" src="../../../assets/images/error.png"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label class="error-message-invalid">{{this.message}}</ion-label>
+
+            <ion-grid fixed class="error-header-grid">
+                <ion-row>
+                    <ion-col size="8">
+                    </ion-col>
+                    <ion-col size="4" style="left: 10%">
+                        <ion-label class="error-return-message" (click)="resetValidCNPJ()">VOLTAR</ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</div>

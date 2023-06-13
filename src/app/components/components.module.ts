@@ -8,18 +8,21 @@ import { IonicModule } from '@ionic/angular';
 import { RedirectButtonComponent } from './redirect-button/redirect-button.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { CompanyItemComponent } from './company-item/company-item.component';
+import { ErrorItemComponent } from './error-item/error-item.component';
 
 
 @NgModule({
     declarations: [
         RedirectButtonComponent,
         SearchBarComponent,
-        CompanyItemComponent
+        CompanyItemComponent,
+        ErrorItemComponent
     ],
     exports: [
         RedirectButtonComponent,
         SearchBarComponent,
-        CompanyItemComponent
+        CompanyItemComponent,
+        ErrorItemComponent
     ],
     imports: [
         CommonModule,

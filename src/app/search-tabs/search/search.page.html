@@ -9,5 +9,7 @@
     <!-- Empresa -->
     <app-company-item *ngIf="companyService.isCNPJValid" [page]="'Pesquisar'" [company]="companyService.searchedCompany"></app-company-item>
 
+    <!-- Erros -->
+    <app-error-item *ngIf="!companyService.isCNPJValid" [message]="companyService.errorMessage" [type]="companyService.errorType"></app-error-item>
 
 </ion-content>

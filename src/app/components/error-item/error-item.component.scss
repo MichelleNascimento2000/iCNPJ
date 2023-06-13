@@ -1,0 +1,65 @@
+//  Texto do título "Erro"
+.error-title-main {
+    font: normal normal bold 17px/24px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--red-1);
+}
+
+//  Card de exibição do erro
+.error-content-card {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    left: 8%;
+
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px #0000004D;
+}
+
+//  Grid com título e icon
+.error-header-grid {
+    position: relative;
+    padding: 0px;
+    left: 0%;
+}
+
+//  Mensagem do erro para CNPJ inválido
+.error-message-invalid {
+    font: normal normal normal 16px/24px Roboto;
+
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--gray-2);
+    opacity: 1;
+}
+
+//  Mensagem do erro para CNPJ inexistente
+.error-message-not-found {
+    font: normal normal bold 18px/24px Roboto;
+
+    text-align: center;
+    letter-spacing: 0px;
+    color: var(--green-1);
+    opacity: 1;
+}
+
+//  Botão de retornar
+.error-return-message {
+    font: normal normal bold 17px/18px Roboto;
+
+    text-align: right;
+    letter-spacing: 0px;
+    color: var(--green-1);
+    opacity: 1;
+}
+
+//  Ícone de CNPJ não encontrado
+.not-found-icon {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: grid;
+}
