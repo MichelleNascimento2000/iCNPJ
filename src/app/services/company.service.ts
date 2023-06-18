@@ -131,12 +131,7 @@ export class CompanyService {
         let returnFromAPI;
         
         try {
-            returnFromAPI = await axios.get
-            (`https://thingproxy.freeboard.io/fetch/https://receitaws.com.br/v1/cnpj/${this.cnpjToGet}`);
-
-            // returnFromAPI = await axios.get
-            // (`https://cors-anywhere.herokuapp.com/https://receitaws.com.br/v1/cnpj/${this.cnpjToGet}`);
-
+            returnFromAPI = (await axios.get(`/api/${this.cnpjToGet}`));
 
             console.log(returnFromAPI.data)
 
