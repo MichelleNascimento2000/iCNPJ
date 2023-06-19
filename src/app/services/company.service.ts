@@ -198,12 +198,14 @@ export class CompanyService {
             console.log(error);
 
             this.changeValidationFields(
-                false, error.message, 'Outros'
-            );
-            
-            this.changeValidationFields(
                 false, 'Desculpe! Nenhum resultado foi encontrado com esse CNPJ. Pesquise novamente!', 'Inexistente'
             );
+
+            if(error.response.status == 429){
+                this.changeValidationFields(
+                    false, 'Excesso de buscas! Tente novamente em 1 minuto.', 'Outros'
+                );
+            }
         }
 
         this.loadingOff();
