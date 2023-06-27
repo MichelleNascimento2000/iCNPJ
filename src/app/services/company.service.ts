@@ -188,10 +188,6 @@ export class CompanyService {
                     false, returnFromAPI.data.message, 'Outros'
                 );
             }
-
-            this.changeValidationFields(
-                true, '', ''
-            );
         } catch (error: any) {
 
             console.log('error');
@@ -222,6 +218,10 @@ export class CompanyService {
 
     //  Valida o CNPJ antes de realizar a busca na API
     public validateCNPJ() : boolean {
+        if(!Boolean(this.cnpjToGet)){
+            return false;
+        }
+
         const arr: number[] = this.cnpjToGet.split('').map(x => Number.parseInt(x));
         
         const firstResult = 
