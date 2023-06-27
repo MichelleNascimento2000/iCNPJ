@@ -3,6 +3,7 @@ import { Company } from '../models/CompanyModels';
 import { AppFeaturesEnum } from '../models/UtilsModels';
 import { KeyValue } from '@angular/common';
 import { NavController } from '@ionic/angular';
+import { Device } from '@capacitor/device';
 import axios from "axios";
 
 @Injectable({
@@ -131,7 +132,14 @@ export class CompanyService {
         let returnFromAPI;
         
         try {
-            returnFromAPI = (await axios.get(`/api/${this.cnpjToGet}`));
+
+            //  Modificar URLs de acesso dependendo do tipo de dispositivo usado
+            if((await Device.getInfo()).platform == 'web'){
+                returnFromAPI = (await axios.get(`/api/${this.cnpjToGet}`));
+
+            } else if((await Device.getInfo()).platform == 'android'){
+                returnFromAPI = (await axios.get(`https://thingproxy.freeboard.io/fetch/https://receitaws.com.br/v1/cnpj/${this.cnpjToGet}`));
+            }
 
             console.log(returnFromAPI.data)
 
